@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:group_app/second_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -113,7 +114,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         TextButton(
                           onPressed: () {
-                            null;
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SecondPage(
+                                          selectedIndex: 2,
+                                        )));
                           },
                           child: const Text(
                             'Gym',
@@ -170,7 +176,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         TextButton(
                           onPressed: () {
-                            null;
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SecondPage(
+                                          selectedIndex: 1,
+                                        )));
                           },
                           child: const Text(
                             'Work',
@@ -218,7 +229,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     TextButton(
                       onPressed: () {
-                        null;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SecondPage(
+                                      selectedIndex: 0,
+                                    )));
                       },
                       child: const Text(
                         'Home',
