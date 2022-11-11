@@ -30,6 +30,17 @@ class _TaskStatusState extends State<TaskStatus> {
     return tasks;
   }
 
+  List<Widget> icons = const [
+    Icon(
+      Icons.panorama_fish_eye,
+      color: Colors.white,
+    ),
+    Icon(
+      Icons.check_circle,
+      color: Colors.green,
+    )
+  ];
+  int iconIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,16 +72,24 @@ class _TaskStatusState extends State<TaskStatus> {
                     return ListView.builder(
                         itemCount: data.length,
                         itemBuilder: (context, index) {
+                          if (data[index].status.toString() == 'true') {
+                            iconIndex = 1;
+                          } else {
+                            iconIndex = 0;
+                          }
                           return ListTile(
-                              leading: const Icon(Icons.person),
-                              title: Text(data[index].title),
-                              subtitle: Text(data[index].status.toString()),
+                              leading: const Icon(
+                                Icons.task,
+                                color: Colors.white,
+                              ),
+                              title: Text(
+                                data[index].title,
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                              subtitle: Text(data[index].status.toString(),
+                                  style: const TextStyle(color: Colors.white)),
                               trailing: IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.panorama_fish_eye,
-                                    color: Colors.redAccent,
-                                  )));
+                                  onPressed: () {}, icon: icons[iconIndex]));
                         });
                   } else {
                     return const Center(

@@ -25,30 +25,39 @@ class _GymScreenState extends State<GymScreen> {
           ),
         ),
         Container(
-          height: 500,
+          height: 350,
           width: double.infinity,
           decoration: const BoxDecoration(
             color: Colors.black,
           ),
           child: Container(
-              height: 500,
+            height: 350,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(60),
+              ),
+              color: Colors.black,
+            ),
+            child: Container(
+              padding: const EdgeInsets.only(right: 30),
+              height: 0,
               width: double.infinity,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(60),
-                ),
-                color: Colors.black,
+                    topLeft: Radius.circular(60),
+                    bottomRight: Radius.circular(80)),
+                color: Colors.white,
               ),
-              child: Container(
-                  padding: const EdgeInsets.only(right: 30),
-                  height: 500,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(60),
-                        bottomRight: Radius.circular(100)),
-                    color: Colors.white,
-                  ))),
+              child: const Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    '30',
+                    style:
+                        TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
+                  )),
+            ),
+          ),
         ),
         Container(
           height: 300,

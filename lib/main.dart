@@ -46,17 +46,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Container(
-              height: 250,
+              height: 150,
               width: double.infinity,
               decoration: BoxDecoration(
+                border: Border.all(width: 0, color: Colors.transparent),
                 color: Colors.blue.shade400,
               ),
               child: Container(
                 padding: const EdgeInsets.all(35),
-                height: 250,
+                height: 150,
                 width: double.infinity,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0),
+                  borderRadius: const BorderRadius.only(
                       bottomRight: Radius.elliptical(100, 75)),
                   color: Colors.black,
                 ),
@@ -83,15 +85,17 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              height: 150,
+              height: 120,
               width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Colors.black,
+              decoration: BoxDecoration(
+                border: Border.all(width: 0),
+                // color: Colors.black,
               ),
               child: Container(
-                height: 150,
+                height: 120,
                 width: double.infinity,
                 decoration: BoxDecoration(
+                  border: Border.all(width: 0),
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.elliptical(100, 90),
                   ),
@@ -99,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: Container(
                     padding: const EdgeInsets.only(right: 50),
-                    height: 150,
+                    height: 122,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
@@ -143,13 +147,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              height: 150,
+              height: 120,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.blue.shade400,
               ),
               child: Container(
-                height: 150,
+                height: 120,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
@@ -159,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: Container(
                     padding: const EdgeInsets.only(right: 50),
-                    height: 150,
+                    height: 120,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
