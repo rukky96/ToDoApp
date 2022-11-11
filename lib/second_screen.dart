@@ -5,7 +5,7 @@ import 'package:group_app/work_screen.dart';
 
 // ignore: must_be_immutable
 class SecondPage extends StatefulWidget {
-  int selectedIndex = 0;
+  int selectedIndex;
   SecondPage({super.key, this.selectedIndex = 0});
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:group_app/second_screen.dart';
+import 'package:group_app/tast_status.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,8 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 250,
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                  borderRadius:
-                      BorderRadius.only(bottomRight: Radius.circular(60)),
+                  borderRadius: BorderRadius.only(
+                      bottomRight: Radius.elliptical(100, 75)),
                   color: Colors.black,
                 ),
                 child: Column(
@@ -66,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text(
                       'Hello',
                       style: TextStyle(
-                          letterSpacing: 2,
                           color: Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
@@ -74,7 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text(
                       'Daniel',
                       style: TextStyle(
-                          letterSpacing: 2,
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold),
@@ -94,18 +93,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(110),
+                    topLeft: Radius.elliptical(100, 90),
                   ),
                   color: Colors.deepPurple.shade400,
                 ),
                 child: Container(
-                    padding: const EdgeInsets.only(right: 30),
+                    padding: const EdgeInsets.only(right: 50),
                     height: 150,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(110),
-                          bottomRight: Radius.circular(60)),
+                          topLeft: Radius.elliptical(100, 90),
+                          bottomRight: Radius.elliptical(100, 75)),
                       color: Colors.blue.shade400,
                     ),
                     child: Row(
@@ -124,7 +123,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: const Text(
                             'Gym',
                             style: TextStyle(
-                                letterSpacing: 2,
                                 color: Colors.white,
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold),
@@ -136,7 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Text(
                           '30',
                           style: TextStyle(
-                              letterSpacing: 2,
                               color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
@@ -156,18 +153,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(110),
+                    topLeft: Radius.elliptical(100, 90),
                   ),
                   color: Colors.blue.shade900,
                 ),
                 child: Container(
-                    padding: const EdgeInsets.only(right: 30),
+                    padding: const EdgeInsets.only(right: 50),
                     height: 150,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(110),
-                          bottomRight: Radius.circular(60)),
+                          topLeft: Radius.elliptical(100, 90),
+                          bottomRight: Radius.elliptical(100, 75)),
                       color: Colors.deepPurple.shade400,
                     ),
                     child: Row(
@@ -186,7 +183,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: const Text(
                             'Work',
                             style: TextStyle(
-                                letterSpacing: 2,
                                 color: Colors.white,
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold),
@@ -198,7 +194,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Text(
                           '15',
                           style: TextStyle(
-                              letterSpacing: 2,
                               color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
@@ -214,12 +209,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.deepPurple.shade400,
               ),
               child: Container(
-                padding: const EdgeInsets.fromLTRB(30, 50, 30, 30),
+                padding: const EdgeInsets.fromLTRB(30, 50, 50, 30),
                 height: 400,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(110),
+                    topLeft: Radius.elliptical(100, 90),
                   ),
                   color: Colors.blue.shade900,
                 ),
@@ -239,7 +234,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: const Text(
                         'Home',
                         style: TextStyle(
-                            letterSpacing: 2,
                             color: Colors.white,
                             fontSize: 25,
                             fontWeight: FontWeight.bold),
@@ -251,7 +245,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     const Text(
                       '30',
                       style: TextStyle(
-                          letterSpacing: 2,
                           color: Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
@@ -265,7 +258,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: () {
-            null;
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const TaskStatus()));
           },
           backgroundColor: const Color.fromARGB(255, 2, 20, 70),
           child: const Icon(
