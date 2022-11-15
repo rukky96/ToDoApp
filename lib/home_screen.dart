@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tab_container/tab_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -40,7 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.black,
             ),
             child: Container(
-              padding: const EdgeInsets.only(right: 30),
               height: 0,
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -49,12 +49,27 @@ class _HomeScreenState extends State<HomeScreen> {
                     bottomRight: Radius.circular(80)),
                 color: Colors.white,
               ),
-              child: const Align(
+              child: Align(
                   alignment: Alignment.center,
-                  child: Text(
-                    '30',
-                    style:
-                        TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
+                  child: TabContainer(
+                    tabs: const ['Completed', 'Uncompleted', 'All Tasks'],
+                    children: const [
+                      Text(
+                        '18',
+                        style: TextStyle(
+                            fontSize: 150, fontWeight: FontWeight.w900),
+                      ),
+                      Text(
+                        '12',
+                        style: TextStyle(
+                            fontSize: 150, fontWeight: FontWeight.w900),
+                      ),
+                      Text(
+                        '30',
+                        style: TextStyle(
+                            fontSize: 150, fontWeight: FontWeight.w900),
+                      )
+                    ],
                   )),
             ),
           ),

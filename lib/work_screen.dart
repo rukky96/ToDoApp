@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tab_container/tab_container.dart';
 
 class WorkScreen extends StatefulWidget {
   const WorkScreen({super.key});
@@ -49,12 +50,27 @@ class _WorkScreenState extends State<WorkScreen> {
                     bottomRight: Radius.circular(80)),
                 color: Colors.white,
               ),
-              child: const Align(
+              child: Align(
                   alignment: Alignment.center,
-                  child: Text(
-                    '15',
-                    style:
-                        TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
+                  child: TabContainer(
+                    tabs: const ['Completed', 'Uncompleted', 'All Tasks'],
+                    children: const [
+                      Text(
+                        '14',
+                        style: TextStyle(
+                            fontSize: 150, fontWeight: FontWeight.w900),
+                      ),
+                      Text(
+                        '16',
+                        style: TextStyle(
+                            fontSize: 150, fontWeight: FontWeight.w900),
+                      ),
+                      Text(
+                        '30',
+                        style: TextStyle(
+                            fontSize: 150, fontWeight: FontWeight.w900),
+                      )
+                    ],
                   )),
             ),
           ),

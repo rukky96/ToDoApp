@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tab_container/tab_container.dart';
 
 class GymScreen extends StatefulWidget {
   const GymScreen({super.key});
@@ -40,23 +41,34 @@ class _GymScreenState extends State<GymScreen> {
               color: Colors.black,
             ),
             child: Container(
-              padding: const EdgeInsets.only(right: 30),
-              height: 0,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    bottomRight: Radius.circular(80)),
-                color: Colors.white,
-              ),
-              child: const Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    '30',
-                    style:
-                        TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
-                  )),
-            ),
+                height: 0,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(80)),
+                  color: Colors.white,
+                ),
+                child: TabContainer(
+                  tabs: const ['Completed', 'Uncompleted', 'All Tasks'],
+                  children: const [
+                    Text(
+                      '8',
+                      style:
+                          TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
+                    ),
+                    Text(
+                      '7',
+                      style:
+                          TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
+                    ),
+                    Text(
+                      '15',
+                      style:
+                          TextStyle(fontSize: 150, fontWeight: FontWeight.w900),
+                    )
+                  ],
+                )),
           ),
         ),
         Container(
