@@ -41,7 +41,6 @@ class _WorkScreenState extends State<WorkScreen> {
               color: Colors.black,
             ),
             child: Container(
-              padding: const EdgeInsets.only(right: 30),
               height: 0,
               width: double.infinity,
               decoration: const BoxDecoration(
